@@ -15,13 +15,12 @@ var fill_color = d3.scale.ordinal()
   .domain(["negative", "positive"])
   .range(["#d84b2a", "#7aa25c"])
 
-//initialize everything, everything will now also run
 initialize();
 
 function initialize() {
   // json data is made into an "array" in variable data
 
-  d3.json("https://api.myjson.com/bins/3ckmb", function(error, data) {
+  d3.json("https://api.myjson.com/bins/48xqr", function(error, data) {
     //json file is loaded, this is when you can start doing data manipulations
     //and building the visualization
     
