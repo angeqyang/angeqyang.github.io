@@ -1,10 +1,76 @@
 <html>
 <head>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src = "tip.js"></script>
+<style type = "text/css">
+  a {
+    text-decoration: none;
+    color:#6699ff;
+  }
+  a:hover {
+    font_weight: bold;
+    color: #98abc5;
+  }
+  body {
+
+   font-family: helvetica; 
+  }
+  .d3-tip {
+    display: inline-block;
+  }
+  .d3-tip .center {
+    display: inline-block;
+    text-align: center;
+    color:#99ccff;
+  }
+  .title h1{font-size:25px;}
+  .title {
+    top:20px; 
+    text-align:center;
+  }
+  #canvas {
+    width: 800px;
+    margin:0 auto;
+
+  }
+  .d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 1px;
+    border-style: solid;
+    border-color: #99ccff;
+  }
+
+  /* Creates a small triangle extender for the tooltip */
+  .d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+  }
+
+  /* Style northward tooltips differently */
+  .d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+  }
+</style>
 </head>
 
-
 <body>
-  
+  <div class="title"><h1>Salary Gaps Between Men and Women in Technology</h1><br>How large is the wage gap in STEM? <br>
+    As seen in <a href = "http://www.washingtonpost.com/blogs/the-switch/wp/2014/11/26/top-male-engineers-at-google-make-nearly-20-more-than-their-female-peers/?tid=sm_fb"> the Washington Post</a>
+  </div>
+<div id="canvas"></div>
+<script src = "visualization.js"></script>
 </body>
 </html>
