@@ -15,6 +15,7 @@ var fill_color = d3.scale.ordinal()
   .domain(["negative", "positive"])
   .range(["#d84b2a", "#7aa25c"])
 
+//initialize everything, everything will now also run
 initialize();
 
 function initialize() {
