@@ -20,7 +20,7 @@ initialize();
 function initialize() {
   // json data is made into an "array" in variable data
 
-  d3.json("data.json", function(error, data) {
+  d3.json("https://api.myjson.com/bins/3ckmb", function(error, data) {
     //json file is loaded, this is when you can start doing data manipulations
     //and building the visualization
     
